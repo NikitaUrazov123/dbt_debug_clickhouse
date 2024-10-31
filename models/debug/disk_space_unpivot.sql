@@ -1,0 +1,1 @@
+{{ dbt_utils.unpivot(ref("disk_space"), cast_to='numeric', exclude=['path','name']) }}

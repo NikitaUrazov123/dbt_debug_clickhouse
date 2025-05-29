@@ -3,6 +3,7 @@ SELECT
     event_time,
     query,
     extract(query, '(model\.clickhouse.*?)"') AS dbt_model_name,
+    --arrayJoin(tables) AS table,
     toInt64(memory_usage) as memory_usage,
     toInt64(read_bytes) AS read_bytes,
     toInt64(written_bytes) AS written_bytes,
